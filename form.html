@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Седона - Отзыв</title>
+</head>
+<body>
+<nav class="menu">
+    <ul class="menu__wrapper">
+        <li class="menu__item">
+            <a href="#">Информация</a>
+        </li>
+        <li class="menu__item">
+            <a href="#">Оставить отзыв</a>
+        </li>
+        <li class="menu__item">
+            <a href="#">Блог шерифа</a>
+        </li>
+        <li class="menu__item">
+            <a href="#">Гостиницы</a>
+        </li>
+    </ul>
+    <div class="menu__close"></div>
+</nav>
+<header class="header">
+    <div class="header_logo">
+        <img src="img/header_logo.svg" alt="Sedona header logo"/>
+    </div>
+    <div class="hamburger hamburger--open">
+    </div>
+</header>
+<div class="promo">
+    <img src="img/text-sedona.svg" alt="Sedona"/>
+</div>
+<section class="content">
+    <div class="content__item content__item--white">
+        <h2>
+            Оставьте свой отзыв
+        </h2>
+
+        <p>
+            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях!
+        </p>
+    </div>
+</section>
+<section class="review">
+    <form id="review" method="post">
+        <fieldset class="review__full-name">
+            <legend>Представьтесь, пожалуйста!</legend>
+            <label class="review__text required">
+                <span>Фамилия:</span>
+                <input name="last-name" type="text" required/>
+            </label>
+            <label class="review__text required">
+                <span>Имя:</span>
+                <input name="first-name" type="text" required/>
+            </label>
+            <label class="review__text">
+                <span>Отчество:</span>
+                <input name="middle-name" type="text"/>
+            </label>
+        </fieldset>
+        <fieldset class="review__impression">
+            <legend>Ваше общее впечатление:</legend>
+            <label class="review__radio">
+                <input name="impression" value="positive" type="radio"/>
+                <span>Скорее положительное</span>
+            </label>
+            <label class="review__radio">
+                <input name="impression" value="negative" type="radio"/>
+                <span>Скорее отрицательное</span>
+            </label>
+
+        </fieldset>
+        <fieldset class="review__dates">
+            <legend>Даты вашей поездки:</legend>
+            <label class="review__date required">
+                <span>Дата приезда:</span>
+                <input name="date-start" type="date"/>
+            </label>
+            <label class="review__range-group required">
+                <span>Длительность пребывания:</span>
+
+                <span class="review__range">
+                    <span class="review__range-minus"></span>
+                    <input name="duration" type="number"/>
+                    <span class="review__range-desc">дн.</span>
+                    <span class="review__range-plus"></span>
+                </span>
+            </label>
+
+            <label class="review__date required">
+                <span>Дата отъезда:</span>
+                <input name="date-finish" type="date"/>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Кол-во путешественников:</legend>
+            <label class="review__range-group required">
+                <span>Количество путешественников:</span>
+
+                <span class="review__range">
+                    <span class="review__range-minus"></span>
+                    <input name="travelers-count" type="number"/>
+                    <span class="review__range-desc">чел.</span>
+                    <span class="review__range-plus"></span>
+                </span>
+            </label>
+        </fieldset>
+        <div class="review__travelers">
+            <div class="review__traveler">
+                <div class="review__traveler-number">
+                    <span>№</span>
+                    <span>1</span>
+                </div>
+                <fieldset class="review__traveler-name">
+                    <label class="review__text required">
+                        <span>Фамилия:</span>
+                        <input name="last-name" type="text" required/>
+                    </label>
+                    <label class="review__text required">
+                        <span>Имя:</span>
+                        <input name="first-name" type="text" required/>
+                    </label>
+                    <label class="review__text">
+                        <span>Отчество:</span>
+                        <input name="middle-name" type="text"/>
+                    </label>
+                </fieldset>
+            </div>
+            <div class="review__traveler">
+                <div class="review__traveler-number">
+                    <span>№</span>
+                    <span>2</span>
+                </div>
+                <fieldset class="review__traveler-name">
+                    <label class="review__text required">
+                        <span>Фамилия:</span>
+                        <input name="last-name" type="text" required/>
+                    </label>
+                    <label class="review__text required">
+                        <span>Имя:</span>
+                        <input name="first-name" type="text" required/>
+                    </label>
+                    <label class="review__text">
+                        <span>Отчество:</span>
+                        <input name="middle-name" type="text"/>
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+        <fieldset class="review__sights">
+            <legend>
+                Посещенные достопримечательности:
+            </legend>
+            <label class="review__checkbox">
+                <input type="checkbox" name="sights" value="devils-bridge"/>
+                <span>Мост Дъявола</span>
+            </label>
+            <label class="review__checkbox">
+                <input type="checkbox" name="sights" value="slide-park"/>
+                <span>Слайд-парк</span>
+            </label>
+            <label class="review__checkbox">
+                <input type="checkbox" name="sights" value="mount-bell"/>
+                <span>Гора-Колокол</span>
+            </label>
+            <label class="review__checkbox">
+                <input type="checkbox" name="sights" value="red-rocks"/>
+                <span>Красные скалы</span>
+            </label>
+        </fieldset>
+        <fieldset class="review__photos">
+            <legend>Загрузите фотографии:</legend>
+            <label class="review__upload">
+                <input name="photos" type="file"/>
+                <span>Выбрать фотографии</span>
+            </label>
+
+            <div class="review__thumbs">
+                <div class="review__thumb-item">
+                    <div class="review__delete-thumb"></div>
+                    <img src="img/photo" alt="Photo 1"/>
+                </div>
+            </div>
+        </fieldset>
+        <button class="review__submit" type="submit">Отправить отзыв</button>
+    </form>
+</section>
+<footer class="footer">
+    <div class="footer__visit">
+        <p>#visitsedona</p>
+    </div>
+    <div class="social">
+        <div class="social__btn social__btn--twitter">
+
+        </div>
+        <div class="social__btn social__btn--facebook">
+
+        </div>
+        <div class="social__btn social__btn--youtube">
+
+        </div>
+    </div>
+    <div class="footer__created">
+        <p>
+            Разработано
+        </p>
+        <img src="img/htmlacademy.svg" alt="HTML Academy logo"/>
+    </div>
+</footer>
+</body>
+</html>
